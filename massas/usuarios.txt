@@ -1,0 +1,11 @@
+Massas de dados de usuários
+
+Usuário ADM
+Nome: Alan cardoso
+Email: alcardosos@hotmail.com
+Senha: Teste123
+
+Usuário Padrão
+Nome: Leonel Almeida
+Email: leo.almeida@gmail.com
+Senha: Teste123
