@@ -1,4 +1,9 @@
-Automação Plataforma ServeRest
+Automação Plataforma ServeRest 
+
+![Web Icon](https://img.shields.io/badge/Web-Site-blue?style=flat&logo=internet-explorer&logoColor=white)
+
+https://front.serverest.dev/login
+
 
 ✏️ Sobre
 
