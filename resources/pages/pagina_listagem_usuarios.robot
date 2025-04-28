@@ -9,13 +9,13 @@ ${BOTAO_LISTAR_USUARIOS}    xpath=//div[@class='card-body']//a[@data-testid='lis
 
 *** Keywords ***
 Dado que estou logado como administrador
-    Input Text    ${LOGIN_EMAIL}    alcardosos@hotmail.com
+    Input Text        ${LOGIN_EMAIL}    alcardosos@hotmail.com
     Input Password    ${LOGIN_SENHA}     Teste123
-    Click Button    ${BOTAO_ENTRAR}
-    Sleep    2s
+    Click Button      ${BOTAO_ENTRAR}
 
 Quando clico em "Listar" no card de listagem de usuários
-    Click Element    ${BOTAO_LISTAR_USUARIOS}
+    Wait Until Element Is Visible    ${BOTAO_LISTAR_USUARIOS}
+    Click Element                    ${BOTAO_LISTAR_USUARIOS}
 
-Então visualizo a página de lista dos usuários
+Então visualizo a página de usuários cadastrados
     Page Should Contain    Lista dos usuários

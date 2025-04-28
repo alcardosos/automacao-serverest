@@ -8,4 +8,4 @@ Test Teardown    Fechar o navegador
 Listagem de usuários cadastrados
     Dado que estou logado como administrador
     Quando clico em "Listar" no card de listagem de usuários
-    Então visualizo a página de lista dos usuários
+    Então visualizo a página de usuários cadastrados
