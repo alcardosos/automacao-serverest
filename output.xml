@@ -1,252 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-04-28T19:15:26.810263" rpa="false" schemaversion="5">
-<suite id="s1" name="Login" source="/Users/usuario/Desktop/Alura/automacao-serverest/tests/login.robot">
-<test id="s1-t1" name="Login correto como administrador" line="8">
-<kw name="Acessar a página de login" owner="setup_teardown" type="SETUP">
+<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-04-28T19:17:26.985990" rpa="false" schemaversion="5">
+<suite id="s1" name="Listagem Produtos" source="/Users/usuario/Desktop/Alura/automacao-serverest/tests/listagem_produtos.robot">
+<test id="s1-t1" name="Listagem de produtos cadastrados" line="8">
+<kw name="Login de administrador" owner="setup_teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:27.386362" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
+<msg time="2025-04-28T19:17:27.570139" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
 <arg>${URL_LOGIN}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T19:15:27.385912" elapsed="4.455900"/>
+<status status="PASS" start="2025-04-28T19:17:27.569696" elapsed="4.093506"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:15:27.384595" elapsed="4.458704"/>
-</kw>
-<kw name="Dado que insiro minhas credenciais de administrador corretamente" owner="pagina_login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:31.860196" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
+<msg time="2025-04-28T19:17:31.670614" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
 <arg>${LOGIN_EMAIL}</arg>
 <arg>alcardosos@hotmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:31.850355" elapsed="0.423294"/>
+<status status="PASS" start="2025-04-28T19:17:31.667996" elapsed="0.367949"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:32.274455" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-28T19:15:32.322629" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T19:17:32.036714" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-04-28T19:17:32.085887" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LOGIN_SENHA}</arg>
 <arg>Teste123</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:32.274034" elapsed="0.125383"/>
+<status status="PASS" start="2025-04-28T19:17:32.036327" elapsed="0.133765"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:15:31.846539" elapsed="0.553147"/>
-</kw>
-<kw name="Quando clico em &quot;Entrar&quot;" owner="pagina_login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:32.402134" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<msg time="2025-04-28T19:17:32.170835" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
 <arg>${BOTAO_ENTRAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:32.401627" elapsed="0.151560"/>
+<status status="PASS" start="2025-04-28T19:17:32.170469" elapsed="0.141716"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T19:15:34.554906" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T19:15:32.553564" elapsed="2.001837"/>
+<status status="PASS" start="2025-04-28T19:17:27.568391" elapsed="4.744292"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:15:32.400394" elapsed="2.155337"/>
+<kw name="Dado que clico em &quot;Listar&quot; no card de listar produtos" owner="pagina_listagem_produtos">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_LISTAR_PRODUTOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-28T19:17:32.323823" elapsed="0.977490"/>
 </kw>
-<kw name="Então visualizo a tela de boas vindas" owner="pagina_login">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:34.585510" level="INFO">Current page contains text 'Bem Vindo'.</msg>
-<arg>Bem Vindo</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:15:34.557634" elapsed="0.028295"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-28T19:17:33.303566" level="INFO">Clicking element 'xpath=//div[@class='card-body']//a[@data-testid='listarProdutos']'.</msg>
+<arg>${BOTAO_LISTAR_PRODUTOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T19:17:33.301931" elapsed="0.135977"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:15:34.556839" elapsed="0.029366"/>
+<status status="PASS" start="2025-04-28T19:17:32.314345" elapsed="1.123831"/>
+</kw>
+<kw name="Então visualizo a página de listagem de produtos" owner="pagina_cadastrar_produtos">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Lista dos Produtos</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-28T19:17:33.442277" elapsed="0.060514"/>
+</kw>
+<status status="PASS" start="2025-04-28T19:17:33.439100" elapsed="0.064125"/>
 </kw>
 <kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T19:15:34.596924" elapsed="0.308011"/>
+<status status="PASS" start="2025-04-28T19:17:33.508593" elapsed="0.392131"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:15:34.593073" elapsed="0.312327"/>
+<status status="PASS" start="2025-04-28T19:17:33.507849" elapsed="0.393506"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:15:27.383419" elapsed="7.522373"/>
+<status status="PASS" start="2025-04-28T19:17:27.567235" elapsed="6.335471"/>
 </test>
-<test id="s1-t2" name="Login correto de usuário padrão" line="13">
-<kw name="Acessar a página de login" owner="setup_teardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:34.920782" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
-<arg>${URL_LOGIN}</arg>
-<arg>browser=Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T19:15:34.919424" elapsed="4.655979"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:34.915600" elapsed="4.660418"/>
-</kw>
-<kw name="Dado que insiro minhas credenciais de usuário padrão" owner="pagina_login">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:39.582530" level="INFO">Typing text 'leo.almeida@gmail.com' into text field 'id:email'.</msg>
-<arg>${LOGIN_EMAIL}</arg>
-<arg>leo.almeida@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:39.581946" elapsed="0.395809"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:39.978441" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-28T19:15:40.024715" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${LOGIN_SENHA}</arg>
-<arg>Teste123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:39.978088" elapsed="0.131592"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:39.581149" elapsed="0.528788"/>
-</kw>
-<kw name="Quando clico em &quot;Entrar&quot;" owner="pagina_login">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:40.118531" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
-<arg>${BOTAO_ENTRAR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:40.117485" elapsed="0.150748"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T19:15:42.270381" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T19:15:40.268620" elapsed="2.002863"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:40.110615" elapsed="2.161291"/>
-</kw>
-<kw name="Então visualizo a página de produtos" owner="pagina_login">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:42.298744" level="INFO">Current page contains text 'Serverest Store'.</msg>
-<arg>Serverest Store</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:15:42.273941" elapsed="0.025120"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:42.273060" elapsed="0.026192"/>
-</kw>
-<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T19:15:42.309037" elapsed="0.252477"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:42.307525" elapsed="0.256509"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:34.910639" elapsed="7.657445"/>
-</test>
-<test id="s1-t3" name="Login com credenciais em branco" line="18">
-<kw name="Acessar a página de login" owner="setup_teardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:42.581517" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
-<arg>${URL_LOGIN}</arg>
-<arg>browser=Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T19:15:42.578091" elapsed="4.432007"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:42.577372" elapsed="4.433577"/>
-</kw>
-<kw name="Dado que clico em &quot;Entrar&quot; sem inserir minhas credenciais" owner="pagina_login">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:47.037962" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
-<arg>${BOTAO_ENTRAR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:47.028106" elapsed="0.183094"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T19:15:49.214093" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T19:15:47.211580" elapsed="2.002852"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:47.018035" elapsed="2.196608"/>
-</kw>
-<kw name="Então visualizo as mensagens de email e password obrigatórios" owner="pagina_login">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:49.259381" level="INFO">Current page contains text 'Email é obrigatório'.</msg>
-<arg>Email é obrigatório</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:15:49.220628" elapsed="0.039339"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:49.293413" level="INFO">Current page contains text 'Password é obrigatório'.</msg>
-<arg>Password é obrigatório</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:15:49.260437" elapsed="0.033321"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:49.215817" elapsed="0.078170"/>
-</kw>
-<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T19:15:49.297689" elapsed="0.336834"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:49.294879" elapsed="0.340005"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:42.575469" elapsed="7.059969"/>
-</test>
-<test id="s1-t4" name="Login com credenciais inválidas" line="22">
-<kw name="Acessar a página de login" owner="setup_teardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:49.640641" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
-<arg>${URL_LOGIN}</arg>
-<arg>browser=Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T19:15:49.639507" elapsed="4.046313"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:49.638756" elapsed="4.047631"/>
-</kw>
-<kw name="Dado que insiro credenciais com senha inválida" owner="pagina_login">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:53.691345" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
-<arg>${LOGIN_EMAIL}</arg>
-<arg>alcardosos@hotmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:53.690683" elapsed="0.317046"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:54.008426" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-28T19:15:54.048833" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${LOGIN_SENHA}</arg>
-<arg>teste123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:54.008066" elapsed="0.107810"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:53.687933" elapsed="0.428218"/>
-</kw>
-<kw name="Quando clico em &quot;Entrar&quot;" owner="pagina_login">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:54.117306" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
-<arg>${BOTAO_ENTRAR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:15:54.117000" elapsed="0.139402"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T19:15:56.258017" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T19:15:54.256759" elapsed="2.001573"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:54.116574" elapsed="2.141954"/>
-</kw>
-<kw name="Então visualizo a mensagem de email ou senha inválidos" owner="pagina_login">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:15:56.296456" level="INFO">Current page contains text 'Email e/ou senha inválidos'.</msg>
-<arg>Email e/ou senha inválidos</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:15:56.259853" elapsed="0.036894"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:56.259110" elapsed="0.037817"/>
-</kw>
-<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T19:15:56.298647" elapsed="0.251033"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:56.297600" elapsed="0.252607"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:15:49.637668" elapsed="6.913182"/>
-</test>
-<status status="PASS" start="2025-04-28T19:15:26.815952" elapsed="29.736392"/>
+<status status="PASS" start="2025-04-28T19:17:26.992855" elapsed="6.918138"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login" id="s1" pass="4" fail="0" skip="0">Login</stat>
+<stat name="Listagem Produtos" id="s1" pass="1" fail="0" skip="0">Listagem Produtos</stat>
 </suite>
 </statistics>
 <errors>
