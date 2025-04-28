@@ -14,8 +14,15 @@ Acessar a página de login
     Open Browser    ${URL_LOGIN}     browser=Chrome
 
 Login de administrador
-    Open Browser      ${URL_LOGIN}     browser=Chrome
-    Input Text        ${LOGIN_EMAIL}    alcardosos@hotmail.com
+    Open Browser      ${URL_LOGIN}       browser=Chrome
+    Input Text        ${LOGIN_EMAIL}     alcardosos@hotmail.com
+    Input Password    ${LOGIN_SENHA}     Teste123
+    Click Button      ${BOTAO_ENTRAR}
+
+Login usuário padrão
+    Login de administrador
+    Open Browser      ${URL_LOGIN}       browser=Chrome
+    Input Text        ${LOGIN_EMAIL}     leo.almeida@gmail.com
     Input Password    ${LOGIN_SENHA}     Teste123
     Click Button      ${BOTAO_ENTRAR}
 
