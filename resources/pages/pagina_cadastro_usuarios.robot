@@ -2,9 +2,6 @@
 Resource    ../main.robot
 
 *** Variables ***
-${LOGIN_EMAIL}                 id:email
-${LOGIN_SENHA}                 id:password
-${BOTAO_ENTRAR}                xpath=//button[text()='Entrar']
 ${BOTAO_CADASTRAR_USUARIOS}    xpath=//div[@class='card-body']//a[@data-testid='cadastrarUsuarios']
 ${CADASTRO_NOME}               id:nome
 ${CADASTRO_EMAIL}              id:email
