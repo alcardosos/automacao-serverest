@@ -2,15 +2,15 @@
 Resource    ../main.robot
 
 *** Variables ***
-${LOGIN_EMAIL}    id:email
-${LOGIN_SENHA}    id:password
-${BOTAO_ENTRAR}    xpath=//button[text()='Entrar']
+${LOGIN_EMAIL}                 id:email
+${LOGIN_SENHA}                 id:password
+${BOTAO_ENTRAR}                xpath=//button[text()='Entrar']
 ${BOTAO_CADASTRAR_USUARIOS}    xpath=//div[@class='card-body']//a[@data-testid='cadastrarUsuarios']
-${CADASTRO_NOME}    id:nome
-${CADASTRO_EMAIL}    id:email
-${CADASTRO_SENHA}    id:password
-${CHECKBOX_ADM}    id:administrador
-${BOTAO_CADASTRAR}    xpath=//button[text()='Cadastrar']
+${CADASTRO_NOME}               id:nome
+${CADASTRO_EMAIL}              id:email
+${CADASTRO_SENHA}              id:password
+${CHECKBOX_ADM}                id:administrador
+${BOTAO_CADASTRAR}             xpath=//button[text()='Cadastrar']
 
 *** Keywords ***
 Dado que estou logado sendo administrador
