@@ -16,9 +16,15 @@ Quando clico em "Entrar"
     Click Button    ${BOTAO_ENTRAR}
     Sleep    2s
 
+Então visualizo a tela de boas vindas
+    Page Should Contain    Bem Vindo
+
 Dado que insiro minhas credenciais de usuário padrão
     Input Text        ${LOGIN_EMAIL}    leo.almeida@gmail.com
     Input Password    ${LOGIN_SENHA}    Teste123
+
+Então visualizo a página de produtos
+    Page Should Contain    Serverest Store
 
 Dado que clico em "Entrar" sem inserir minhas credenciais
     Click Button    ${BOTAO_ENTRAR}
