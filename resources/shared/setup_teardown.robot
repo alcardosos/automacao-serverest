@@ -6,6 +6,7 @@ Resource    ../pages/pagina_cadastro_usuarios.robot
 Resource    ../pages/pagina_cadastrar_produtos.robot
 Resource    ../pages/pagina_listagem_usuarios.robot
 Resource    ../pages/pagina_listagem_produtos.robot
+Resource    ../pages/pagina_relatorios.robot
 
 *** Keywords ***
 Acessar a página de cadastro

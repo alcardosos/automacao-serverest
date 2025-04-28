@@ -1,241 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-04-28T19:20:24.419048" rpa="false" schemaversion="5">
-<suite id="s1" name="Cadastrar Produtos" source="/Users/usuario/Desktop/Alura/automacao-serverest/tests/cadastrar_produtos.robot">
-<test id="s1-t1" name="Cadastro de produto" line="8">
+<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-04-28T19:30:23.029237" rpa="false" schemaversion="5">
+<suite id="s1" name="Relatorios" source="/Users/usuario/Desktop/Alura/automacao-serverest/tests/relatorios.robot">
+<test id="s1-t1" name="Acesso aos relatórios" line="8">
 <kw name="Login de administrador" owner="setup_teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:25.106067" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
+<msg time="2025-04-28T19:30:23.600507" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
 <arg>${URL_LOGIN}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T19:20:25.105597" elapsed="4.129903"/>
+<status status="PASS" start="2025-04-28T19:30:23.600011" elapsed="2.588831"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:29.240852" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
+<msg time="2025-04-28T19:30:26.197092" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
 <arg>${LOGIN_EMAIL}</arg>
 <arg>alcardosos@hotmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:29.236769" elapsed="0.390559"/>
+<status status="PASS" start="2025-04-28T19:30:26.190029" elapsed="1.628204"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:29.628537" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-28T19:20:29.673936" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T19:30:27.818953" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-04-28T19:30:27.864387" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LOGIN_SENHA}</arg>
 <arg>Teste123</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:29.627929" elapsed="0.119990"/>
+<status status="PASS" start="2025-04-28T19:30:27.818586" elapsed="0.120906"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:29.748897" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<msg time="2025-04-28T19:30:27.940188" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
 <arg>${BOTAO_ENTRAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:29.748386" elapsed="0.129716"/>
+<status status="PASS" start="2025-04-28T19:30:27.939828" elapsed="0.124482"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:20:25.104203" elapsed="4.774352"/>
+<status status="PASS" start="2025-04-28T19:30:23.598587" elapsed="4.466035"/>
 </kw>
-<kw name="Dado que acesso na página de cadastro de produtos" owner="pagina_cadastrar_produtos">
+<kw name="Dado que clico em &quot;Ver&quot; no card de relatórios" owner="pagina_relatorios">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_CADASTRAR_PRODUTOS}</arg>
+<arg>${BOTAO_VER_RELATORIOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-28T19:20:29.886074" elapsed="1.165629"/>
+<status status="PASS" start="2025-04-28T19:30:28.065793" elapsed="1.030874"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:31.052468" level="INFO">Clicking element 'xpath=//div[@class='card-body']//a[@data-testid='cadastrarProdutos']'.</msg>
-<arg>${BOTAO_CADASTRAR_PRODUTOS}</arg>
+<msg time="2025-04-28T19:30:29.097399" level="INFO">Clicking element 'xpath=//div[@class='card-body']//a[@data-testid='relatorios']'.</msg>
+<arg>${BOTAO_VER_RELATORIOS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:31.052084" elapsed="0.175600"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:29.879972" elapsed="1.348335"/>
-</kw>
-<kw name="Quando submeto os dados corretamente" owner="pagina_cadastrar_produtos">
-<kw name="Text" owner="FakerLibrary">
-<msg time="2025-04-28T19:20:31.232575" level="INFO">${Nome} = Fugiat blanditiis possimus praesentium nam. Odio eaque mollitia sit fugiat saepe. Optio commodi unde quo.</msg>
-<var>${Nome}</var>
-<doc>Generate a text string.</doc>
-<status status="PASS" start="2025-04-28T19:20:31.231613" elapsed="0.001330"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:31.234065" level="INFO">Typing text 'Fugiat blanditiis possimus praesentium nam. Odio eaque mollitia sit fugiat saepe. Optio commodi unde quo.' into text field 'id:nome'.</msg>
-<arg>${NOME_PRODUTO}</arg>
-<arg>${Nome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:31.233522" elapsed="0.625714"/>
-</kw>
-<kw name="Numerify" owner="FakerLibrary">
-<msg time="2025-04-28T19:20:31.859928" level="INFO">${Preco} = 008</msg>
-<var>${Preco}</var>
-<doc>Generate a string with each placeholder in ``text`` replaced according
-to the following rules:</doc>
-<status status="PASS" start="2025-04-28T19:20:31.859570" elapsed="0.000507"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:31.860622" level="INFO">Typing text '008' into text field 'id:price'.</msg>
-<arg>${PRECO_PRODUTO}</arg>
-<arg>${Preco}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:31.860297" elapsed="0.111691"/>
-</kw>
-<kw name="Texts" owner="FakerLibrary">
-<msg time="2025-04-28T19:20:31.973734" level="INFO">${Descricao} = ['Quod cupiditate laborum. Aperiam dolorem eius esse. Maiores doloremque laudantium. Repellat tempora reiciendis dolore saepe.\nFuga nam eum. At odio deleniti reprehenderit suscipit asperiores dolor u...</msg>
-<var>${Descricao}</var>
-<doc>Generate a list of text strings.</doc>
-<status status="PASS" start="2025-04-28T19:20:31.972499" elapsed="0.001725"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:31.975536" level="INFO">Typing text '['Quod cupiditate laborum. Aperiam dolorem eius esse. Maiores doloremque laudantium. Repellat tempora reiciendis dolore saepe.\nFuga nam eum. At odio deleniti reprehenderit suscipit asperiores dolor ut.', 'Adipisci esse distinctio illum dicta reiciendis. Saepe explicabo quasi ullam.\nVel alias excepturi eaque iure facere minus. Aspernatur atque fuga. Magni quos impedit rerum cupiditate.', 'Hic fugit impedit reiciendis aperiam temporibus ab. Ea adipisci quia laborum aut aliquam dolore. Laborum delectus corrupti debitis numquam aliquam totam veniam.']' into text field 'id:description'.</msg>
-<arg>${DESCRICAO_PRODUTO}</arg>
-<arg>${Descricao}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:31.975011" elapsed="1.770220"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:33.747958" level="INFO">Typing text '10' into text field 'id:quantity'.</msg>
-<arg>${QTD_PRODUTO}</arg>
-<arg>10</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:33.747062" elapsed="0.116151"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:31.229204" elapsed="2.634277"/>
-</kw>
-<kw name="E clico em &quot;Cadastrar&quot;" owner="pagina_cadastro">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:33.866769" level="INFO">Clicking button 'xpath=//button[text()='Cadastrar']'.</msg>
-<arg>${BOTAO_CADASTRAR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:33.866066" elapsed="0.130815"/>
+<status status="PASS" start="2025-04-28T19:30:29.097029" elapsed="0.099618"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T19:20:38.998904" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<msg time="2025-04-28T19:30:32.199794" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T19:20:33.997209" elapsed="5.002185"/>
+<status status="PASS" start="2025-04-28T19:30:29.197324" elapsed="3.004420"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:20:33.864661" elapsed="5.135054"/>
+<status status="PASS" start="2025-04-28T19:30:28.065226" elapsed="4.136876"/>
 </kw>
-<kw name="Então visualizo a página de listagem de produtos" owner="pagina_cadastrar_produtos">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Lista dos Produtos</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-28T19:20:39.001412" elapsed="0.024459"/>
+<kw name="Então visualizo a mensagem de ainda em construção na página" owner="pagina_relatorios">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-28T19:30:32.232097" level="INFO">Current page contains text 'Em construção aguarde'.</msg>
+<arg>Em construção aguarde</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-28T19:30:32.203636" elapsed="0.028775"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:20:39.000623" elapsed="0.025514"/>
+<status status="PASS" start="2025-04-28T19:30:32.202966" elapsed="0.029635"/>
 </kw>
 <kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T19:20:39.034976" elapsed="0.487321"/>
+<status status="PASS" start="2025-04-28T19:30:32.247190" elapsed="0.523747"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:20:39.031501" elapsed="0.491526"/>
+<status status="PASS" start="2025-04-28T19:30:32.237304" elapsed="0.534051"/>
 </kw>
-<status status="PASS" start="2025-04-28T19:20:25.102923" elapsed="14.420900"/>
+<status status="PASS" start="2025-04-28T19:30:23.597479" elapsed="9.174188"/>
 </test>
-<test id="s1-t2" name="Cadastro de produtos sem os dados obrigatórios" line="14">
-<kw name="Login de administrador" owner="setup_teardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:39.765462" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
-<arg>${URL_LOGIN}</arg>
-<arg>browser=Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T19:20:39.764662" elapsed="3.746041"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:43.513763" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
-<arg>${LOGIN_EMAIL}</arg>
-<arg>alcardosos@hotmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:43.512683" elapsed="0.388415"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:43.901797" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-28T19:20:43.946487" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${LOGIN_SENHA}</arg>
-<arg>Teste123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:43.901443" elapsed="0.117707"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:44.019829" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
-<arg>${BOTAO_ENTRAR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:44.019492" elapsed="0.130913"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:39.552492" elapsed="4.598321"/>
-</kw>
-<kw name="Dado que acesso na página de cadastro de produtos" owner="pagina_cadastrar_produtos">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_CADASTRAR_PRODUTOS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-28T19:20:44.152950" elapsed="1.317794"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:45.471401" level="INFO">Clicking element 'xpath=//div[@class='card-body']//a[@data-testid='cadastrarProdutos']'.</msg>
-<arg>${BOTAO_CADASTRAR_PRODUTOS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:45.471065" elapsed="0.213508"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:44.151664" elapsed="1.533309"/>
-</kw>
-<kw name="E clico em &quot;Cadastrar&quot;" owner="pagina_cadastro">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:45.687683" level="INFO">Clicking button 'xpath=//button[text()='Cadastrar']'.</msg>
-<arg>${BOTAO_CADASTRAR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T19:20:45.687109" elapsed="0.300138"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T19:20:50.988729" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T19:20:45.987557" elapsed="5.002999"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:45.686128" elapsed="5.304753"/>
-</kw>
-<kw name="Então visualizo as mensagens de campos obrigatórios para cadastro de prtodutos" owner="pagina_cadastrar_produtos">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:51.020457" level="INFO">Current page contains text 'Nome é obrigatório'.</msg>
-<arg>Nome é obrigatório</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:20:50.993201" elapsed="0.027596"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:51.051038" level="INFO">Current page contains text 'Preco é obrigatório'.</msg>
-<arg>Preco é obrigatório</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:20:51.021088" elapsed="0.030585"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:51.076035" level="INFO">Current page contains text 'Descricao é obrigatório'.</msg>
-<arg>Descricao é obrigatório</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:20:51.052304" elapsed="0.024111"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T19:20:51.098234" level="INFO">Current page contains text 'Quantidade é obrigatório'.</msg>
-<arg>Quantidade é obrigatório</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T19:20:51.076687" elapsed="0.021862"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:50.991862" elapsed="0.106896"/>
-</kw>
-<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T19:20:51.099771" elapsed="0.335088"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:51.099301" elapsed="0.336271"/>
-</kw>
-<status status="PASS" start="2025-04-28T19:20:39.526778" elapsed="11.909508"/>
-</test>
-<status status="PASS" start="2025-04-28T19:20:24.425453" elapsed="27.017728"/>
+<status status="PASS" start="2025-04-28T19:30:23.033565" elapsed="9.739692"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Cadastrar Produtos" id="s1" pass="2" fail="0" skip="0">Cadastrar Produtos</stat>
+<stat name="Relatorios" id="s1" pass="1" fail="0" skip="0">Relatorios</stat>
 </suite>
 </statistics>
 <errors>
