@@ -13,20 +13,15 @@ ${CHECKBOX_ADM}                id:administrador
 ${BOTAO_CADASTRAR}             xpath=//button[text()='Cadastrar']
 
 *** Keywords ***
-Dado que estou logado sendo administrador
-    Input Text    ${LOGIN_EMAIL}    alcardosos@hotmail.com
-    Input Password    ${LOGIN_SENHA}     Teste123
-    Click Button    ${BOTAO_ENTRAR}
-    Sleep    2s
+Dado que clico em "Cadastrar" no card de cadastro de usuários
+    Wait Until Element Is Visible    ${BOTAO_CADASTRAR_USUARIOS}
+    Click Element                    ${BOTAO_CADASTRAR_USUARIOS}
 
-Quando clico em "Cadastrar" no card de cadastro de usuários
-    Click Element    ${BOTAO_CADASTRAR_USUARIOS}
-
-E submeto os dados corretamernte
-    ${Nome}    FakerLibrary.Name
-    Input Text    ${CADASTRO_NOME}    ${Nome}
-    ${Email}    FakerLibrary.Email
-    Input Text    ${CADASTRO_EMAIL}    ${Email}
+Quando submeto os dados corretamernte
+    ${Nome}           FakerLibrary.Name
+    Input Text        ${CADASTRO_NOME}     ${Nome}
+    ${Email}          FakerLibrary.Email
+    Input Text        ${CADASTRO_EMAIL}    ${Email}
     Input Password    ${CADASTRO_SENHA}    Teste123
 
 E marco o checkbox de cadastrar como administrador
@@ -34,3 +29,9 @@ E marco o checkbox de cadastrar como administrador
 
 Então visualizo a página de lista dos usuários
     Page Should Contain    Lista dos usuários
+
+Quando submeto um cadastro com um email sem ".com"
+    ${Nome}           FakerLibrary.Name
+    Input Text        ${CADASTRO_NOME}     ${Nome}
+    Input Text        ${CADASTRO_EMAIL}    email@invalido
+    Input Password    ${CADASTRO_SENHA}    Teste123
