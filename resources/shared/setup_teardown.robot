@@ -29,4 +29,5 @@ Login usuário padrão
     Click Button      ${BOTAO_ENTRAR}
 
 Fechar o navegador
+    Capture Page Screenshot    ./screenshots/${TEST NAME}.png
     Close Browser
