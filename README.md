@@ -54,6 +54,7 @@ Execute os testes com o comando robot -d ./results tests/, onde ./results é a p
 📈 Relatórios
 
 É possível visualizar os relatórios de execução dos testes através dos arquivos: log.html, output.xml e report.html, gerados após a execução de alguma suite de teste.
+Também são geradas evidências via captura de tela ao final de cada caso de teste executados, sendo armazenadas na pasta "Screenshots" do projeto.
 
 <br>
 👥 Desenvolvido por:
