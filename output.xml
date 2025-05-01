@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-04-30T23:50:26.518467" rpa="false" schemaversion="5">
-<suite id="s1" name="Listagem Usuarios" source="/Users/usuario/Desktop/Alura/automacao-serverest/tests/listagem_usuarios.robot">
-<test id="s1-t1" name="Listagem de usuários cadastrados" line="8">
+<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-04-30T23:53:27.169708" rpa="false" schemaversion="5">
+<suite id="s1" name="Relatorios" source="/Users/usuario/Desktop/Alura/automacao-serverest/tests/relatorios.robot">
+<test id="s1-t1" name="Acesso aos relatórios" line="8">
 <kw name="Login de administrador" owner="setup_teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-30T23:50:27.140880" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
+<msg time="2025-04-30T23:53:27.768225" level="INFO">Opening browser 'Chrome' to base url 'https://front.serverest.dev/login'.</msg>
 <arg>${URL_LOGIN}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-30T23:50:27.139497" elapsed="4.179642"/>
+<status status="PASS" start="2025-04-30T23:53:27.765463" elapsed="4.048598"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-30T23:50:31.326323" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
+<msg time="2025-04-30T23:53:31.816283" level="INFO">Typing text 'alcardosos@hotmail.com' into text field 'id:email'.</msg>
 <arg>${LOGIN_EMAIL}</arg>
 <arg>alcardosos@hotmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-30T23:50:31.320404" elapsed="0.364641"/>
+<status status="PASS" start="2025-04-30T23:53:31.815226" elapsed="0.353309"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-30T23:50:31.685975" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-30T23:50:31.729949" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-30T23:53:32.171605" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-04-30T23:53:32.214657" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LOGIN_SENHA}</arg>
 <arg>Teste123</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-30T23:50:31.685541" elapsed="0.124398"/>
+<status status="PASS" start="2025-04-30T23:53:32.170952" elapsed="0.121403"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-30T23:50:31.810991" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<msg time="2025-04-30T23:53:32.293070" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
 <arg>${BOTAO_ENTRAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-30T23:50:31.810546" elapsed="0.136879"/>
+<status status="PASS" start="2025-04-30T23:53:32.292713" elapsed="0.123838"/>
 </kw>
-<status status="PASS" start="2025-04-30T23:50:27.137590" elapsed="4.810204"/>
+<status status="PASS" start="2025-04-30T23:53:27.760665" elapsed="4.656180"/>
 </kw>
-<kw name="Dado que clico em &quot;Listar&quot; no card de listagem de usuários" owner="pagina_listagem_usuarios">
+<kw name="Dado que clico em &quot;Ver&quot; no card de relatórios" owner="pagina_relatorios">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_LISTAR_USUARIOS}</arg>
+<arg>${BOTAO_VER_RELATORIOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-30T23:50:31.951412" elapsed="1.126784"/>
+<status status="PASS" start="2025-04-30T23:53:32.428334" elapsed="1.084800"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-30T23:50:33.078991" level="INFO">Clicking element 'xpath=//div[@class='card-body']//a[@data-testid='listarUsuarios']'.</msg>
-<arg>${BOTAO_LISTAR_USUARIOS}</arg>
+<msg time="2025-04-30T23:53:33.515127" level="INFO">Clicking element 'xpath=//div[@class='card-body']//a[@data-testid='relatorios']'.</msg>
+<arg>${BOTAO_VER_RELATORIOS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-30T23:50:33.078571" elapsed="0.282026"/>
+<status status="PASS" start="2025-04-30T23:53:33.513743" elapsed="0.434672"/>
 </kw>
-<status status="PASS" start="2025-04-30T23:50:31.949910" elapsed="1.411278"/>
+<status status="PASS" start="2025-04-30T23:53:32.419811" elapsed="1.529537"/>
 </kw>
-<kw name="Então visualizo a página de usuários cadastrados" owner="pagina_listagem_usuarios">
+<kw name="Então visualizo a mensagem de ainda em construção na página" owner="pagina_relatorios">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Lista dos usuários</arg>
+<arg>Em construção aguarde</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-30T23:50:33.365514" elapsed="0.042639"/>
+<status status="PASS" start="2025-04-30T23:53:33.951339" elapsed="0.041939"/>
 </kw>
-<status status="PASS" start="2025-04-30T23:50:33.362581" elapsed="0.045895"/>
+<status status="PASS" start="2025-04-30T23:53:33.950263" elapsed="0.043248"/>
 </kw>
 <kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-30T23:50:33.413552" elapsed="0.345847"/>
+<status status="PASS" start="2025-04-30T23:53:33.995627" elapsed="0.302273"/>
 </kw>
-<status status="PASS" start="2025-04-30T23:50:33.411647" elapsed="0.348339"/>
+<status status="PASS" start="2025-04-30T23:53:33.994249" elapsed="0.304428"/>
 </kw>
-<status status="PASS" start="2025-04-30T23:50:27.134940" elapsed="6.625551"/>
+<status status="PASS" start="2025-04-30T23:53:27.758419" elapsed="6.541738"/>
 </test>
-<status status="PASS" start="2025-04-30T23:50:26.522974" elapsed="7.247391"/>
+<status status="PASS" start="2025-04-30T23:53:27.175480" elapsed="7.154938"/>
 </suite>
 <statistics>
 <total>
@@ -73,7 +73,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Listagem Usuarios" id="s1" pass="1" fail="0" skip="0">Listagem Usuarios</stat>
+<stat name="Relatorios" id="s1" pass="1" fail="0" skip="0">Relatorios</stat>
 </suite>
 </statistics>
 <errors>

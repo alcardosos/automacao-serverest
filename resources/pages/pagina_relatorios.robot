@@ -10,4 +10,4 @@ Dado que clico em "Ver" no card de relatórios
     Click Element                    ${BOTAO_VER_RELATORIOS}
 
 Então visualizo a mensagem de ainda em construção na página
-    Page Should Contain    Em construção aguarde
+    Wait Until Page Contains    Em construção aguarde
