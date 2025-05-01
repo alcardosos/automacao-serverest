@@ -10,4 +10,4 @@ Dado que clico em "Listar" no card de listagem de usuários
     Click Element                    ${BOTAO_LISTAR_USUARIOS}
 
 Então visualizo a página de usuários cadastrados
-    Page Should Contain    Lista dos usuários
+    Wait Until Page Contains    Lista dos usuários
