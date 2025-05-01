@@ -3,12 +3,12 @@ Resource    ../main.robot
 
 *** Variables ***
 ${BOTAO_CADASTRAR_PRODUTOS}    xpath=//div[@class='card-body']//a[@data-testid='cadastrarProdutos']
-${NOME_PRODUTO}    id:nome 
-${PRECO_PRODUTO}    id:price
-${DESCRICAO_PRODUTO}    id:description
-${QTD_PRODUTO}    id:quantity
-${IMAGEM_PRODUTO}    id:imagem
-${BOTAO_CADASTRAR_PRODUTO}    xpath=//button[text()='Cadastrar']
+${NOME_PRODUTO}                id:nome 
+${PRECO_PRODUTO}               id:price
+${DESCRICAO_PRODUTO}           id:description
+${QTD_PRODUTO}                 id:quantity
+${IMAGEM_PRODUTO}              id:imagem
+${BOTAO_CADASTRAR_PRODUTO}     xpath=//button[text()='Cadastrar']
 
 *** Keywords ***
 Dado que acesso na página de cadastro de produtos
@@ -28,7 +28,7 @@ Então visualizo a página de listagem de produtos
     Wait Until Page Contains    Lista dos Produtos
 
 Então visualizo as mensagens de campos obrigatórios para cadastro de prtodutos
-    Page Should Contain    Nome é obrigatório
-    Page Should Contain    Preco é obrigatório
-    Page Should Contain    Descricao é obrigatório
-    Page Should Contain    Quantidade é obrigatório
+    Wait Until Page Contains    Nome é obrigatório
+    Wait Until Page Contains    Preco é obrigatório
+    Wait Until Page Contains    Descricao é obrigatório
+    Wait Until Page Contains    Quantidade é obrigatório

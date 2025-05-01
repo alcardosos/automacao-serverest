@@ -21,27 +21,27 @@ Quando clico no checkbox de "Cadastrar como administrador?"
     Click Element    ${CHECKBOX_ADM} 
 
 E clico em "Cadastrar"
-    Click Button    ${BOTAO_CADASTRAR}
-    Sleep    5s
+    Wait Until Element Is Visible    ${BOTAO_CADASTRAR}
+    Click Button                     ${BOTAO_CADASTRAR}
 
 Então sou direcionado à tela de boas vindas
-    Page Should Contain    Bem Vindo 
+    Wait Until Page Contains    Bem Vindo 
 
 Quando clico em "Cadastrar"
-    Click Button    ${BOTAO_CADASTRAR}
-    Sleep    5s
+    Wait Until Element Is Visible    ${BOTAO_CADASTRAR}
+    Click Button                     ${BOTAO_CADASTRAR}
 
 Então sou direcionado à página de produtos
-    Page Should Contain    Serverest Store
+    Wait Until Page Contains    Serverest Store
 
 Dado que clico em "Cadastrar" sem preencher nenhum dos campos
-    Click Element    ${BOTAO_CADASTRAR}
-    Sleep    2s
+    Wait Until Element Is Visible    ${BOTAO_CADASTRAR}
+    Click Element                    ${BOTAO_CADASTRAR}
 
 Então visualizo as mensagens de campos obrigatórios
-    Page Should Contain    Nome é obrigatório
-    Page Should Contain    Email é obrigatório
-    Page Should Contain    Password é obrigatório
+    Wait Until Page Contains    Nome é obrigatório
+    Wait Until Page Contains    Email é obrigatório
+    Wait Until Page Contains    Password é obrigatório
 
 Dado que submeto meu cadastro com um email sem ".com"
     ${Nome}           FakerLibrary.Name
@@ -50,4 +50,4 @@ Dado que submeto meu cadastro com um email sem ".com"
     Input Password    ${CADASTRO_SENHA}    Teste123
 
 Então visualizo a mensagem de que o email deve ser válido
-    Page Should Contain    Email deve ser um email válido
+    Wait Until Page Contains    Email deve ser um email válido

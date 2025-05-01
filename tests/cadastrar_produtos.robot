@@ -13,5 +13,5 @@ Cadastro de produto
 
 Cadastro de produtos sem os dados obrigatórios
     Dado que acesso na página de cadastro de produtos
-    E clico em "Cadastrar"
+    Quando clico em "Cadastrar"
     Então visualizo as mensagens de campos obrigatórios para cadastro de prtodutos
