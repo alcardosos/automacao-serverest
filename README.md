@@ -50,6 +50,8 @@ Navegue até o diretório do projeto.
 
 Execute os testes com o comando robot -d ./results tests/, onde ./results é a pasta onde os resultados dos testes serão armazenados.
 
+Para a execução da feature de login, é necessário realizar o cadastro dos usuários do arquivo massas.txt, pois a base de cadastros é limpa diáriamente, para não sobrecarregar a base de testes. 
+
 <br>
 📈 Relatórios
 

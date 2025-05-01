@@ -5,11 +5,13 @@ Test Setup       Acessar a página de login
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
+#Necessário cadastrar a massa diáriamente antes do teste
 Login correto como administrador
     Dado que insiro minhas credenciais de administrador corretamente
     Quando clico em "Entrar"
     Então visualizo a tela de boas vindas
 
+#Necessário cadastrar a massa diáriamente antes do teste
 Login correto de usuário padrão
     Dado que insiro minhas credenciais de usuário padrão
     Quando clico em "Entrar"
