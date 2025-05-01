@@ -25,7 +25,7 @@ E marco o checkbox de cadastrar como administrador
     Click Element    ${CHECKBOX_ADM}
 
 Então visualizo a página de lista dos usuários
-    Page Should Contain    Lista dos usuários
+    Wait Until Page Contains    Lista dos usuários
 
 Quando submeto um cadastro com um email sem ".com"
     ${Nome}           FakerLibrary.Name
