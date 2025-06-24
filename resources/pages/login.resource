@@ -9,8 +9,8 @@ ${BOTAO_ENTRAR}       xpath=//button[text()='Entrar']
 
 *** Keywords ***
 Dado que insiro minhas credenciais de administrador corretamente
-    Input Text        ${LOGIN_EMAIL}     teste@administrador.com
-    Input Password    ${LOGIN_SENHA}     Teste123
+    Input Text        ${LOGIN_EMAIL}     teste@admin.com
+    Input Password    ${LOGIN_SENHA}     Adm@teste123
 
 Quando clico em "Entrar"
     Click Button    ${BOTAO_ENTRAR}
@@ -19,8 +19,8 @@ Então visualizo a tela de boas vindas
     Wait Until Page Contains    Bem Vindo
 
 Dado que insiro minhas credenciais de usuário padrão
-    Input Text        ${LOGIN_EMAIL}    teste@usuario.com
-    Input Password    ${LOGIN_SENHA}    Teste123
+    Input Text        ${LOGIN_EMAIL}    teste@user.com
+    Input Password    ${LOGIN_SENHA}    User@teste123
 
 Então visualizo a página de produtos
     Wait Until Page Contains    Serverest Store
