@@ -1,6 +1,5 @@
 *** Settings ***
 Resource         ../resources/main.robot
-Resource         ../resources/pages/pagina_cadastro.robot
 Test Setup       Acessar a página de cadastro
 Test Teardown    Fechar o navegador
 

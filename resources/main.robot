@@ -5,7 +5,7 @@ Library    FakerLibrary    locale=pt_BR
 Library    Screenshot
 
 Resource    shared/setup_teardown.robot
-Resource    ./pages/pagina_cadastro.robot
+Resource    ./pages/cadastro.resource
 Resource    ./pages/pagina_login.robot
 Resource    ./pages/cadastro_usuarios.resource
 Resource    ./pages/cadastrar_produtos.resource
