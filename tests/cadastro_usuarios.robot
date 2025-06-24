@@ -1,6 +1,5 @@
 *** Settings ***
 Resource         ../resources/main.robot
-Resource         ../resources/pages/pagina_cadastro_usuarios.robot
 Test Setup       Login de administrador
 Test Teardown    Fechar o navegador
 

@@ -1,13 +1,5 @@
 *** Settings ***
 Resource    ../main.robot
-Resource    ../pages/pagina_cadastro.robot
-Resource    ../pages/pagina_login.robot
-Resource    ../pages/pagina_cadastro_usuarios.robot
-Resource    ../pages/pagina_cadastrar_produtos.robot
-Resource    ../pages/pagina_listagem_usuarios.robot
-Resource    ../pages/pagina_listagem_produtos.robot
-Resource    ../pages/pagina_relatorios.robot
-Resource    ../pages/pagina_comprar_produto.robot
 
 *** Keywords ***
 Acessar a página de cadastro
@@ -18,16 +10,16 @@ Acessar a página de login
 
 Login de administrador
     Open Browser      ${URL_LOGIN}       browser=Chrome
-    Input Text        ${LOGIN_EMAIL}     alcardosos@hotmail.com
-    Input Password    ${LOGIN_SENHA}     Teste123
+    Input Text        ${LOGIN_EMAIL}     teste@admin.com
+    Input Password    ${LOGIN_SENHA}     Adm@teste123
     Click Button      ${BOTAO_ENTRAR}
 
 Login usuário padrão
     Open Browser      ${URL_LOGIN}       browser=Chrome
-    Input Text        ${LOGIN_EMAIL}     leo.almeida@gmail.com
-    Input Password    ${LOGIN_SENHA}     Teste123
+    Input Text        ${LOGIN_EMAIL}     teste@user.com
+    Input Password    ${LOGIN_SENHA}     User@teste123
     Click Button      ${BOTAO_ENTRAR}
 
 Fechar o navegador
-    Capture Page Screenshot    ./screenshots/${TEST NAME}.png
+    Capture Page Screenshot
     Close Browser

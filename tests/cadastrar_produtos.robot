@@ -1,6 +1,5 @@
 *** Settings ***
 Resource         ../resources/main.robot
-Resource         ../resources/pages/pagina_cadastrar_produtos.robot
 Test Setup       Login de administrador
 Test Teardown    Fechar o navegador
 
