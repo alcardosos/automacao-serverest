@@ -9,3 +9,9 @@ Usuário Padrão
 Nome: Teste Usuário
 Email: teste@user.com
 Senha: User@teste123
+
+Produto
+Nome: s23
+Preço: 5000
+Descrição: Smartphone Galaxy S23
+Quantidade: 1
