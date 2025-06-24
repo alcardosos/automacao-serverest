@@ -4,12 +4,12 @@ Library    BuiltIn
 Library    FakerLibrary    locale=pt_BR
 Library    Screenshot
 
-Resource    shared/setup_teardown.robot
+Resource    shared/setup_teardown.resource
 Resource    ./pages/cadastro.resource
-Resource    ./pages/pagina_login.robot
+Resource    ./pages/login.resource
 Resource    ./pages/cadastro_usuarios.resource
 Resource    ./pages/cadastrar_produtos.resource
-Resource    ./pages/pagina_listagem_usuarios.robot
-Resource    ./pages/pagina_listagem_produtos.robot
-Resource    ./pages/pagina_relatorios.robot
-Resource    ./pages/pagina_comprar_produto.robot
+Resource    ./pages/listagem_usuarios.resource
+Resource    ./pages/listagem_produtos.resource
+Resource    ./pages/relatorios.resource
+Resource    ./pages/comprar_produto.resource

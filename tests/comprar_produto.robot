@@ -1,6 +1,5 @@
 *** Settings ***
 Resource         ../resources/main.robot
-Resource         ../resources/pages/pagina_comprar_produto.robot
 Test Setup       Login usuário padrão
 Test Teardown    Fechar o navegador
 

@@ -1,6 +1,5 @@
 *** Settings ***
 Resource         ../resources/main.robot
-Resource         ../resources/pages/pagina_login.robot
 Test Setup       Acessar a página de login
 Test Teardown    Fechar o navegador
 
