@@ -1,14 +1,6 @@
 *** Settings ***
 Resource    ../main.robot
 
-*** Variables ***
-${URL_CADASTRO}       https://front.serverest.dev/cadastrarusuarios
-${CADASTRO_NOME}      id:nome
-${CADASTRO_EMAIL}     id:email
-${CADASTRO_SENHA}     id:password
-${CHECKBOX_ADM}       id:administrador
-${BOTAO_CADASTRAR}    xpath=//button[text()='Cadastrar']
-
 *** Keywords ***
 Dado que submeto todos os dados corretamente
     ${Nome}           FakerLibrary.Name

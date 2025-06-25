@@ -10,12 +10,14 @@ Acessar a página de login
 
 Login de administrador
     Open Browser      ${URL_LOGIN}       browser=Chrome
+    Wait Until Element Is Visible        ${LOGIN_EMAIL}    5
     Input Text        ${LOGIN_EMAIL}     teste@admin.com
     Input Password    ${LOGIN_SENHA}     Adm@teste123
     Click Button      ${BOTAO_ENTRAR}
 
 Login usuário padrão
     Open Browser      ${URL_LOGIN}       browser=Chrome
+    Wait Until Element Is Visible        ${LOGIN_EMAIL}    5
     Input Text        ${LOGIN_EMAIL}     teste@user.com
     Input Password    ${LOGIN_SENHA}     User@teste123
     Click Button      ${BOTAO_ENTRAR}

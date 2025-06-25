@@ -1,12 +1,6 @@
 *** Settings ***
 Resource    ../main.robot
 
-*** Variables ***
-${URL_LOGIN}          https://front.serverest.dev/login
-${LOGIN_EMAIL}        id:email
-${LOGIN_SENHA}        id:password
-${BOTAO_ENTRAR}       xpath=//button[text()='Entrar']
-
 *** Keywords ***
 Dado que insiro minhas credenciais de administrador corretamente
     Input Text        ${LOGIN_EMAIL}     teste@admin.com
